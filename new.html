@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+
+<div class='container'>
+    <form method='POST'>
+        {% csrf_token %}
+        <table>
+            {{form.as_p}}
+            <!-- as_x는 form을 어떤 형식으로정리해서 보여주느냐의 문제 -->
+        </table>
+        <br>
+        <input class="btn btn-dark" type="submit" value="제출하기">
+    </form>
+</div>
+{%endblock%}
